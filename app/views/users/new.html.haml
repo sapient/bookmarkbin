@@ -1,0 +1,25 @@
+%h1 Sign up
+
+#signup-form
+  = form_for @user, :url => register_url do |f|
+    - if @user.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@user.errors.count, "error")
+          prohibited this bookmark from being saved:
+        %ul
+          - @user.errors.full_messages.each do |msg|
+            %li= msg
+
+    %table
+      %tr
+        %td= f.label :username
+        %td= f.text_field :username
+      %tr
+        %td= f.label :password
+        %td= f.password_field :password
+      %tr
+        %td= f.label :password_confirmation
+        %td= f.password_field :password_confirmation
+      %tr
+        %td= f.submit "Create account"

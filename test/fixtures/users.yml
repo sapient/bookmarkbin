@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  email: MyString
+  password_digest: MyString
+  confirmation_token: MyString
+  confirmed_at: 2011-07-31 02:02:59
+
+two:
+  username: MyString
+  email: MyString
+  password_digest: MyString
+  confirmation_token: MyString
+  confirmed_at: 2011-07-31 02:02:59
