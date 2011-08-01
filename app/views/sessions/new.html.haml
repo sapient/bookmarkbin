@@ -1,0 +1,11 @@
+%h1 Sign in
+#sign-in
+  = form_for User.new, :url => login_path do |f|
+    #username
+      = f.label :username
+      = f.text_field :username
+    #password
+      = f.label :password
+      = f.password_field :password
+    #submit
+      = f.submit "Sign in"

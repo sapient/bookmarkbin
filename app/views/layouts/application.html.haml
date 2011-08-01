@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Bookmarkb.in
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    #flash
+      - flash.each do |key, msg|
+        = content_tag :div, msg, :class => key
+    = yield
