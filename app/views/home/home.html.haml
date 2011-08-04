@@ -1,5 +1,14 @@
 %h1 Personal home
-#user
+
+#session
   = "Welcome #{current_user.username}"
-  #session
-    = link_to "Log out", logout_path
+  \|
+  = link_to "Log out", logout_path
+
+#new-bookmark
+  = render "bookmarks/form"
+#bookmarks
+  %h2 Bookmarks
+  - @bookmarks.each do |bookmark|
+    .bookmark
+      = link_to bookmark.description, bookmark.url

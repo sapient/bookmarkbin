@@ -1,7 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    ZenTest (4.6.0)
     actionmailer (3.1.0.rc5)
       actionpack (= 3.1.0.rc5)
       mail (~> 2.3.0)
@@ -33,10 +32,7 @@ GEM
       multi_json (~> 1.0)
     addressable (2.2.6)
     ansi (1.3.0)
-    archive-tar-minitar (0.5.2)
     arel (2.1.4)
-    autotest (4.4.6)
-      ZenTest (>= 4.4.1)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
     capybara (1.0.0)
@@ -52,7 +48,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.1)
-    columnize (0.3.4)
+    colored (1.2)
     cucumber (1.0.2)
       builder (>= 2.1.2)
       diff-lcs (>= 1.1.2)
@@ -65,15 +61,31 @@ GEM
       nokogiri (>= 1.4.6)
     database_cleaner (0.6.7)
     diff-lcs (1.1.2)
+    em-websocket (0.3.1)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
     email_spec (1.2.1)
       mail (~> 2.2)
       rspec (~> 2.0)
     erubis (2.7.0)
+    eventmachine (0.12.10)
     execjs (1.2.1)
       multi_json (~> 1.0)
+    factory_girl (2.0.2)
+    factory_girl_rails (1.1.0)
+      factory_girl (~> 2.0.0)
+      railties (>= 3.0.0)
     ffi (1.0.9)
     gherkin (2.4.5)
       json (>= 1.4.6)
+    guard (0.5.1)
+      thor (~> 0.14.6)
+    guard-livereload (0.2.1)
+      em-websocket (>= 0.2.0)
+      guard (>= 0.4.0)
+      json (>= 1.5.1)
+    guard-rspec (0.4.0)
+      guard (>= 0.4.0)
     haml (3.1.2)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -89,8 +101,6 @@ GEM
     json_pure (1.5.3)
     launchy (2.0.5)
       addressable (~> 2.2.6)
-    linecache19 (0.5.12)
-      ruby_core_source (>= 0.1.4)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -124,6 +134,8 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2)
+    rb-inotify (0.8.6)
+      ffi (>= 0.5.0)
     rdoc (3.8)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
@@ -138,16 +150,6 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
-    ruby-debug-base19 (0.11.25)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
-    ruby_core_source (0.1.5)
-      archive-tar-minitar (>= 0.5.2)
     rubyzip (0.9.4)
     sass (3.1.5)
     sass-rails (3.1.0.rc.5)
@@ -184,18 +186,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autotest
   capybara
   coffee-script
+  colored
   cucumber-rails
   database_cleaner
   email_spec
+  factory_girl_rails
+  guard-livereload
+  guard-rspec
   haml-rails
   jquery-rails
   launchy
   rails (= 3.1.0.rc5)
+  rb-inotify
   rspec-rails
-  ruby-debug19
   sass-rails (~> 3.1.0.rc)
   sqlite3
   turn

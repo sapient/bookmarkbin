@@ -1,5 +1,7 @@
 Bmark::Application.routes.draw do
 
+  resources :bookmarks
+
   match '/logout' => 'sessions#destroy', :as => :logout
   match '/sign_in' => 'sessions#new', :as => :sign_in
   match '/login/:username' => 'sessions#backdoor', :as => :login_backdoor if Rails.env.cucumber?
