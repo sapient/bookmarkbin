@@ -30,3 +30,11 @@ Given /^"([^"]*)" logs in with "([^"]*)"$/ do |password|
   fill_in("Password", :with => password)
   click_on("Sign in")
 end
+
+Given /^I am signed in$/ do
+  User.create(:username => "Sapient", :password => "password", :password_confirmation => "password")
+  visit('/sign_in')
+  fill_in("Username", :with => "Sapient")
+  fill_in("Password", :with => "password")
+  click_on("Sign in")
+end
