@@ -14,6 +14,7 @@ gem 'uglifier'
 gem 'haml-rails'
 
 gem 'jquery-rails'
+gem 'colored'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -22,16 +23,19 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+#gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :development, :test do
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'autotest'
   gem 'launchy'
   gem 'turn', :require => false
   gem 'capybara'
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
+  gem 'rb-inotify'
+  gem 'guard-rspec'
+  gem 'guard-livereload'
 end
 
